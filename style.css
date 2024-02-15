@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FBfada;
+}
+.coin{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    background-size: cover;
+    margin-top: 5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frontCoin{
+    width: 10rem;
+    height: 10rem;
+    background-image: url(head.png);
+    background-size: cover;
+    position: absolute;
+    backface-visibility: hidden;
+   transform: rotateX(180deg);
+   /* transform: rotateY(180deg); */
+   border-radius: 75%;
+}
+.backCoin{
+    width: 10rem;
+    height: 10rem;
+    background-image: url(tails.png);
+    background-size: cover;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 750%;
+
+}
+.animationHead{
+    animation: rotateHead 3s ;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.animationTails{
+    animation: rotatetails 3s ;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.container{
+    position: relative;
+    top: 20%;
+    background-color: #adbc9f;
+    width: 40rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    align-items: center;
+    box-shadow: 0.3rem 0.4rem  0.4rem black;
+}
+#flipCoin{
+    margin: 1rem 0 0 0 ;
+    background-color: #12372a;
+    width: 9.5rem;
+    height: 4rem;
+    padding: 0.4rem 0.3rem;
+    font-size: 1.7;
+    color: #FBfada;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.3rem 0.3rem black;
+}
+p{
+    margin: 2rem auto;
+    font-size: 2rem;
+    color: #FBfada;
+    background-color: #12372a;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+
+
+}
+h1{
+    color: #FBfada;
+    background-color: #12372a;
+    padding: 2rem 4rem;
+    margin-top: 1rem auto;
+    position: relative;
+    top: 1rem ;
+    border-radius: 2rem;
+    box-shadow: 0.1rem 0.3rem 0.3rem black;
+
+}
+@keyframes rotatetails {
+    from{transform: rotateX(0deg);}
+    /* from{transform: rotateY(0deg);} */
+    to{transform: rotateX(1800deg);}
+    /* to{transform: rotateY(1800deg);} */
+}
+@keyframes rotateHead {
+    from{transform: rotateX(0deg);}
+    /* from{transform: rotateY(0deg);} */
+    to{transform: rotateX(1620deg);}
+    /* to{transform: rotateY(1620deg);} */
+}
+.visiblity{
+    visibility: hidden;
+}
+@media(max-width:450px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:385px){
+    html{
+        font-size: 45%;
+    }
+    #flipCoin{
+        font-size: 85%;
+    }
+}
+ @media(max-width:360px){
+    html{
+        font-size: 43%;
+    }
+    h1{
+        font-size: 98%;
+    }
+}
+ @media(max-width:235px){
+    html{
+        font-size: 30%;
+    }
+}
